@@ -1,7 +1,7 @@
 {
   "name": "ember-simple-auth-parse",
   "version": "0.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "ember-simple-auth integration for Parse",
   "directories": {
     "doc": "doc",
     "test": "tests"
