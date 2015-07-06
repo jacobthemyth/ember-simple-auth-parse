@@ -9,7 +9,8 @@
 ## Usage
 
 *A (mostly) complete example implementation can be found in the [dummy
-app](tests/dummy).*
+app](tests/dummy). Until routeable components are released, the dummy app will
+have route templates that contain only a single line, rendering a component.*
 
 This library depends on
 [ember-parse-adapter](https://github.com/clintjhill/ember-parse-adapter) and
