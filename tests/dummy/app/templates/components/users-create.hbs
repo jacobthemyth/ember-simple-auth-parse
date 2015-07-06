@@ -1,0 +1,6 @@
+<form {{action 'createUser' on='submit'}}>
+  {{paper-text label="Name" value=model.name}}
+  {{paper-text label="E-mail" type="email" value=model.username}}
+  {{paper-text label="Password" type="password" value=model.password}}
+  {{#paper-button classNames="md-primary"}}Sign Up{{/paper-button}}
+</form>
