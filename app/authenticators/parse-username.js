@@ -32,6 +32,8 @@ export default BaseAuthenticator.extend({
       }
     }).then(function(response) {
       return normalizeSessionData(response);
+    }, function(response) {
+      return Ember.RSVP.reject({message: "Incorrect username or password"});
     });
   }
 });
