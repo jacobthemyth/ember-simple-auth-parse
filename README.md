@@ -26,10 +26,10 @@ can used directly with the `authenticate` method, or using the
 LoginControllerMixin on controllers or components (see [dummy app](tests/dummy)
 for example of using the mixin).
 
-- **parse-user**
+- **parse-username**
 
     ```js
-    this.get('session').authenticate('authenticator:parse-user', {
+    this.get('session').authenticate('authenticator:parse-username', {
       identification: 'person@email.com', // corresponds to username on Parse
       password: 'coolpassword'
     });
