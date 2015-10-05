@@ -1,9 +1,9 @@
 import Ember from 'ember';
-import Session from 'simple-auth/session';
+import Session from 'ember-simple-auth/services/session';
 
 export default {
   name: 'parse-current-user',
-  before: 'simple-auth',
+  before: 'ember-simple-auth',
   initialize: function(container) {
     Session.reopen({
       currentUser: function() {

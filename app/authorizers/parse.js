@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import BaseAuthorizer from 'simple-auth/authorizers/base';
+import BaseAuthorizer from 'ember-simple-auth/authorizers/base';
 
 export default BaseAuthorizer.extend({
   authorize: function(jqXHR) {
