@@ -1,12 +1,13 @@
 import Ember from 'ember';
-import BaseAuthenticator from 'simple-auth/authenticators/base';
+import BaseAuthenticator from 'ember-simple-auth/authenticators/base';
 
 export default BaseAuthenticator.extend({
   restore: function(data) {
     data = data || {};
 
     if(data.sessionToken) {
-      var adapter = this.container.lookup('store:main').adapterFor('parseUser');
+      var store = this.container.lookup('service:store') || this.container.lookup('store:main');
+      var adapter = store.adapterFor('parseUser');
 
       return adapter.ajax('https://api.parse.com/1/users/me', 'GET', {
         headers: {
@@ -23,7 +24,8 @@ export default BaseAuthenticator.extend({
   authenticate: function(data) {
     data = data || {};
 
-    var adapter = this.container.lookup('store:main').adapterFor('parseUser');
+    var store = this.container.lookup('service:store') || this.container.lookup('store:main');
+    var adapter = store.adapterFor('parseUser');
 
     return adapter.ajax('https://api.parse.com/1/users/me', 'GET', {
       headers: {
