@@ -1,6 +1,6 @@
 {
   "name": "ember-simple-auth-parse",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "ember-simple-auth integration for Parse",
   "directories": {
     "doc": "doc",
